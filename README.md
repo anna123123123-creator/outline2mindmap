@@ -1,5 +1,7 @@
 # Outline2MindMap
 
+**[Live demo →](https://anna123123123-creator.github.io/outline2mindmap/)**
+
 A tiny, free, browser-only tool that turns an indented text outline into a visual mind map — export as PNG or SVG. No install, no account, no backend, no analytics. The outline text never leaves your browser.
 
 ![screenshot](screenshot.png)
