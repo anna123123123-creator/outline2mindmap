@@ -1,46 +1,46 @@
-# Outline2MindMap
+# 大纲转思维导图 · Outline2MindMap
 
-**[Live demo →](https://anna123123123-creator.github.io/outline2mindmap/)**
+**[在线体验 →](https://anna123123123-creator.github.io/outline2mindmap/)**
 
-A tiny, free, browser-only tool that turns an indented text outline into a visual mind map — export as PNG or SVG. No install, no account, no backend, no analytics. The outline text never leaves your browser.
+一个免费、开源、纯浏览器运行的小工具：把缩进文本大纲一键转换成可视化思维导图，支持导出 PNG / SVG。不用安装、不用注册、不需要后端、不做任何数据统计——大纲内容不会离开你的浏览器。
 
 ![screenshot](screenshot.png)
 
-## Why
+## 为什么做这个
 
-Most mind-map tools want an account, a cloud save, or a subscription just to draw boxes and lines. Sometimes you just have an outline (or can write one in 30 seconds) and want a clean diagram out of it. This is that tool.
+大部分思维导图工具都要注册账号、要云端保存、甚至要订阅才能画几个方框连几条线。但很多时候你手上就是一份大纲（或者30秒就能写出一份），只想要一张干净的导图。这个工具就是干这个的。
 
-## Try it
+## 试用方法
 
-Open `index.html` in any modern browser — no build step, no dependencies. Or serve the folder with any static file server:
+直接用浏览器打开 `index.html`，不需要构建、不需要装依赖。或者用任意静态文件服务器跑起来：
 
 ```bash
 python3 -m http.server 8000
-# then open http://localhost:8000
+# 然后打开 http://localhost:8000
 ```
 
-## Usage
+## 使用说明
 
-1. Type or paste an outline in the left panel. Indent with 2 spaces (or a tab) per level:
+1. 在左边输入或粘贴一份大纲，每一级用 2 个空格（或 1 个 Tab）缩进：
    ```
-   Project Plan
-     Research
-       Competitor analysis
-       User interviews
-     Design
-       Wireframes
+   项目计划
+     调研
+       竞品分析
+       用户访谈
+     设计
+       线框图
    ```
-2. Click **Generate** (or just start typing — the example loads automatically on first open).
-3. Click **Export PNG** or **Export SVG** to save the diagram.
+2. 点击**生成**（第一次打开会自动加载示例）。
+3. 点击**导出 PNG** 或**导出 SVG** 保存导图。
 
-## How it works
+## 实现原理
 
-Plain-text outline → tree structure → a simple left-to-right tree layout, computed and rendered directly as inline SVG. No canvas libraries, no charting dependencies — about 200 lines of vanilla JavaScript in `script.js`.
+纯文本大纲 → 解析成树结构 → 简单的从左到右树形布局算法，直接计算坐标并渲染成内联 SVG。没有用任何画图库或图表依赖，`script.js` 里大概 200 行原生 JavaScript。
 
-## License
+## 协议
 
-MIT — do whatever you want with it.
+MIT，随便怎么用都行。
 
-## Related
+## 相关项目
 
-This started as a companion tool while building a full **AI-powered** mind-map product (AI-generated outlines from a single prompt, automatic branching, multiple map styles, multi-tenant admin backend, member/credit system). If you need that instead of a manual outline-to-diagram tool, the full source code is here: [AI Mind Map source code](https://inzyxuashop.com/aisiweidaotu-yuanma.html).
+这个工具是做一款完整的 **AI 思维导图**产品时顺手做的配套小工具——完整版支持一句话 AI 生成大纲、自动分支、多种导图样式、完整的多租户管理后台和会员算力体系。如果你需要的是这些而不是手动画图的小工具，完整源码在这：[AI 思维导图网站源码](https://inzyxuashop.com/aisiweidaotu-yuanma.html)。

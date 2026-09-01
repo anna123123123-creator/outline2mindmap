@@ -2,20 +2,20 @@
   'use strict';
 
   var EXAMPLE = [
-    'Project Plan',
-    '  Research',
-    '    Competitor analysis',
-    '    User interviews',
-    '  Design',
-    '    Wireframes',
-    '    Visual design',
-    '  Build',
-    '    Frontend',
-    '    Backend',
-    '    QA',
-    '  Launch',
-    '    Marketing site',
-    '    Release notes',
+    '项目计划',
+    '  调研',
+    '    竞品分析',
+    '    用户访谈',
+    '  设计',
+    '    线框图',
+    '    视觉稿',
+    '  开发',
+    '    前端',
+    '    后端',
+    '    测试',
+    '  上线',
+    '    官网发布',
+    '    版本说明',
   ].join('\n');
 
   var input = document.getElementById('outlineInput');
@@ -27,8 +27,10 @@
   var V_GAP = 16;
   var PAD_X = 18;
   var PAD_Y = 24;
-  var CHAR_W = 7.2;
   var MIN_NODE_W = 120;
+  var FONT = '13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif';
+  var measureCtx = document.createElement('canvas').getContext('2d');
+  measureCtx.font = FONT;
 
   function indentLevel(line) {
     var m = line.match(/^[ \t]*/)[0];
@@ -59,7 +61,8 @@
   }
 
   function nodeWidth(text) {
-    return Math.max(MIN_NODE_W, Math.round(text.length * CHAR_W) + 32);
+    var measured = measureCtx.measureText(text).width;
+    return Math.max(MIN_NODE_W, Math.round(measured) + 32);
   }
 
   function layout(root) {
@@ -167,7 +170,7 @@
     style.textContent = [
       '.node rect{fill:#111a2c;stroke:rgba(147,160,184,.35);stroke-width:1.4}',
       '.node.root rect{fill:url(#rootGrad);stroke:none}',
-      '.node text{fill:#EAF0FA;font-size:13px;font-family:sans-serif;dominant-baseline:middle}',
+      '.node text{fill:#EAF0FA;font-size:13px;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;dominant-baseline:middle}',
       '.node.root text{fill:#06121A;font-weight:700}',
       '.link{fill:none;stroke:rgba(147,160,184,.35);stroke-width:1.6}',
     ].join('\n');

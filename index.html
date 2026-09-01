@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Outline2MindMap — turn indented text into a mind map</title>
-<meta name="description" content="Free, open-source, browser-only tool that converts an indented text outline into a visual mind map. No install, no backend, no data leaves your browser.">
+<title>大纲转思维导图 · Outline2MindMap</title>
+<meta name="description" content="免费开源、纯浏览器运行的小工具，把缩进文本大纲一键转换成可视化思维导图。不用安装、不用注册、不联网，数据不会离开你的浏览器。">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topbar">
-    <h1>Outline<span class="accent">2</span>MindMap</h1>
-    <p class="tagline">Paste an indented outline on the left, get a mind map on the right. 100% local, nothing is uploaded.</p>
+    <h1>大纲<span class="accent">转</span>思维导图</h1>
+    <p class="tagline">左边粘贴缩进文本大纲，右边自动生成思维导图。100% 本地运行，不上传任何数据。</p>
   </header>
 
   <main class="layout">
     <section class="panel panel-input">
       <div class="panel-head">
-        <span>Outline</span>
+        <span>大纲</span>
         <div class="btns">
-          <button id="btnExample" class="btn btn-ghost">Load example</button>
-          <button id="btnGenerate" class="btn btn-primary">Generate →</button>
+          <button id="btnExample" class="btn btn-ghost">加载示例</button>
+          <button id="btnGenerate" class="btn btn-primary">生成 →</button>
         </div>
       </div>
-      <textarea id="outlineInput" spellcheck="false" placeholder="Project Plan
-  Research
-    Competitor analysis
-    User interviews
-  Design
-    Wireframes
-    Visual design
-  Build
-    Frontend
-    Backend
-  Launch"></textarea>
-      <p class="hint">Use 2 spaces (or a tab) per indent level. The first line is the root node.</p>
+      <textarea id="outlineInput" spellcheck="false" placeholder="项目计划
+  调研
+    竞品分析
+    用户访谈
+  设计
+    线框图
+    视觉稿
+  开发
+    前端
+    后端
+  上线"></textarea>
+      <p class="hint">每一级缩进用 2 个空格（或 1 个 Tab）。第一行是根节点。</p>
     </section>
 
     <section class="panel panel-output">
       <div class="panel-head">
-        <span>Mind Map</span>
+        <span>思维导图</span>
         <div class="btns">
-          <button id="btnPNG" class="btn btn-ghost">Export PNG</button>
-          <button id="btnSVG" class="btn btn-ghost">Export SVG</button>
+          <button id="btnPNG" class="btn btn-ghost">导出 PNG</button>
+          <button id="btnSVG" class="btn btn-ghost">导出 SVG</button>
         </div>
       </div>
       <div id="canvasWrap" class="canvas-wrap">
@@ -51,8 +51,8 @@
   </main>
 
   <footer class="footer">
-    <p>MIT licensed, no tracking, no server round-trip — the outline never leaves your browser.</p>
-    <p>Want AI-generated outlines, auto-branching, multiple map styles and a full multi-tenant admin backend? <a href="https://inzyxuashop.com/aisiweidaotu-yuanma.html" target="_blank" rel="noopener">See the full AI Mind Map source code →</a></p>
+    <p>MIT 协议开源，不追踪、不联网 —— 大纲内容不会离开你的浏览器。</p>
+    <p>想要 AI 自动生成大纲、自动分支、多种导图样式，还有完整的多租户管理后台？<a href="https://inzyxuashop.com/aisiweidaotu-yuanma.html" target="_blank" rel="noopener">看看完整版 AI 思维导图源码 →</a></p>
   </footer>
 
   <script src="script.js"></script>
