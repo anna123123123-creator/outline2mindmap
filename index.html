@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outline2MindMap — turn indented text into a mind map</title>
+<meta name="description" content="Free, open-source, browser-only tool that converts an indented text outline into a visual mind map. No install, no backend, no data leaves your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Outline<span class="accent">2</span>MindMap</h1>
+    <p class="tagline">Paste an indented outline on the left, get a mind map on the right. 100% local, nothing is uploaded.</p>
+  </header>
+
+  <main class="layout">
+    <section class="panel panel-input">
+      <div class="panel-head">
+        <span>Outline</span>
+        <div class="btns">
+          <button id="btnExample" class="btn btn-ghost">Load example</button>
+          <button id="btnGenerate" class="btn btn-primary">Generate →</button>
+        </div>
+      </div>
+      <textarea id="outlineInput" spellcheck="false" placeholder="Project Plan
+  Research
+    Competitor analysis
+    User interviews
+  Design
+    Wireframes
+    Visual design
+  Build
+    Frontend
+    Backend
+  Launch"></textarea>
+      <p class="hint">Use 2 spaces (or a tab) per indent level. The first line is the root node.</p>
+    </section>
+
+    <section class="panel panel-output">
+      <div class="panel-head">
+        <span>Mind Map</span>
+        <div class="btns">
+          <button id="btnPNG" class="btn btn-ghost">Export PNG</button>
+          <button id="btnSVG" class="btn btn-ghost">Export SVG</button>
+        </div>
+      </div>
+      <div id="canvasWrap" class="canvas-wrap">
+        <svg id="mindmap" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>MIT licensed, no tracking, no server round-trip — the outline never leaves your browser.</p>
+    <p>Want AI-generated outlines, auto-branching, multiple map styles and a full multi-tenant admin backend? <a href="https://inzyxuashop.com/aisiweidaotu-yuanma.html" target="_blank" rel="noopener">See the full AI Mind Map source code →</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
