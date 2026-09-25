@@ -1,46 +1,42 @@
-# 大纲转思维导图 · Outline2MindMap
+# Outline2MindMap
 
-**[在线体验 →](https://anna123123123-creator.github.io/outline2mindmap/)**
+**[Live demo →](https://anna123123123-creator.github.io/outline2mindmap/)**
 
-一个免费、开源、纯浏览器运行的小工具：把缩进文本大纲一键转换成可视化思维导图，支持导出 PNG / SVG。不用安装、不用注册、不需要后端、不做任何数据统计——大纲内容不会离开你的浏览器。
+A free, open-source tool that turns an indented text outline into a visual mind map, entirely in the browser. Exports PNG and SVG. No install, no signup, no backend, no analytics — the outline never leaves your tab.
 
 ![screenshot](screenshot.png)
 
-## 为什么做这个
+## Why this exists
 
-大部分思维导图工具都要注册账号、要云端保存、甚至要订阅才能画几个方框连几条线。但很多时候你手上就是一份大纲（或者30秒就能写出一份），只想要一张干净的导图。这个工具就是干这个的。
+Most mind-mapping tools want an account, a cloud account, or a subscription before they will draw a few boxes and a few lines. But often all you have is an outline — or an outline you could write in 30 seconds — and you just want a clean diagram out of it. That is all this does.
 
-## 试用方法
+## Run it
 
-直接用浏览器打开 `index.html`，不需要构建、不需要装依赖。或者用任意静态文件服务器跑起来：
+Open `index.html` in a browser. No build step, no dependencies. Or serve the folder with any static server:
 
 ```bash
 python3 -m http.server 8000
-# 然后打开 http://localhost:8000
+# then open http://localhost:8000
 ```
 
-## 使用说明
+## How to use it
 
-1. 在左边输入或粘贴一份大纲，每一级用 2 个空格（或 1 个 Tab）缩进：
+1. Type or paste an outline on the left. Indent each level with two spaces (or one tab):
    ```
-   项目计划
-     调研
-       竞品分析
-       用户访谈
-     设计
-       线框图
+   Project plan
+     Research
+       Competitor review
+       User interviews
+     Design
+       Wireframes
    ```
-2. 点击**生成**（第一次打开会自动加载示例）。
-3. 点击**导出 PNG** 或**导出 SVG** 保存导图。
+2. Click **Generate** (a sample outline loads on first open).
+3. Click **Export PNG** or **Export SVG** to save the map.
 
-## 实现原理
+## How it works
 
-纯文本大纲 → 解析成树结构 → 简单的从左到右树形布局算法，直接计算坐标并渲染成内联 SVG。没有用任何画图库或图表依赖，`script.js` 里大概 200 行原生 JavaScript。
+Plain text outline → parsed into a tree → a simple left-to-right tree layout that computes coordinates directly and renders inline SVG. No drawing library, no charting dependency — roughly 200 lines of vanilla JavaScript in `script.js`.
 
-## 协议
+## License
 
-MIT，随便怎么用都行。
-
-## 相关项目
-
-这个工具是做一款完整的 **AI 思维导图**产品时顺手做的配套小工具——完整版支持一句话 AI 生成大纲、自动分支、多种导图样式、完整的多租户管理后台和会员算力体系。如果你需要的是这些而不是手动画图的小工具，完整源码在这：[全能源码 · AI 思维导图网站源码](https://inzyxuashop.com/aisiweidaotu-yuanma.html)。
+MIT — use it however you like.
